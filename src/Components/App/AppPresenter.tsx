@@ -5,9 +5,11 @@ interface IProps {
   isLoggedIn: boolean;
 }
 
-const AppPresenter: React.SFC<IProps> = ({isLoggedIn}) => {
-  return isLoggedIn ? <span>You are IN</span> : <span>You are OUT</span>
-};
+const AppPresenter: React.SFC<IProps> = ({isLoggedIn}) => (
+  isLoggedIn ? <span>you are in</span> : <span>you are out</span>
+);
+
+
 
 AppPresenter.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired
